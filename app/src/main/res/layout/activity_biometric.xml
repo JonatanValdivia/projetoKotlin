@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.BiometricDataActivity"
+    android:orientation="vertical"
+
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/header_activity_biometric"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_marginBottom="40dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:background="@drawable/header_biometric_background_color_card"
+                android:gravity="center">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/informe_seus_dados_biometricos"
+                    style="@style/text_header_biometric"
+                    />
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:gravity="center_horizontal">
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="@string/hint_peso"
+            android:inputType="textPersonName"
+            >
+
+            <EditText
+                android:id="@+id/edit_text_peso"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="numberDecimal" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:id="@+id/text_view_atividades"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/nivel_de_atividades_diarias_biometria"
+            android:textSize="16sp"
+            android:layout_marginTop="16dp"/>
+
+        <Spinner
+            android:id="@+id/spinner_atividades"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:entries="@array/atividades"
+            android:background="@drawable/edit_text_background"
+            android:padding="16dp"
+            android:layout_marginBottom="16dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Data de pesagem"
+            />
+
+        <EditText
+            android:id="@+id/data_pesagem"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="12/12/2012"
+            android:editable="false"/>
+
+        <Button
+            android:id="@+id/button_salvar_dados_biometricos"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/button_salvar_dados_biometricos"
+            android:layout_marginTop="30dp"/>
+    </LinearLayout>
+
+
+
+
+
+</LinearLayout>
